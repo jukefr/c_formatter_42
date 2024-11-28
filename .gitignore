@@ -11,3 +11,6 @@ docs/build/
 /.vimspector.json
 
 .vscode
+
+# nix-build result
+result
