@@ -46,16 +46,16 @@ def _config_context():
 
 
 if sys.platform == "linux":
-    CLANG_FORMAT_EXEC = DATA_DIR / "clang-format-linux"
+    CLANG_FORMAT_EXEC = "clang-format"
 elif sys.platform == "darwin":
     if platform.machine() == "arm64":
         # macOS M1 or Apple Silicon
-        CLANG_FORMAT_EXEC = DATA_DIR / "clang-format-darwin-arm64"
+        CLANG_FORMAT_EXEC = "clang-format"
     elif platform.machine() == "x86_64":
         # macOS Intel
-        CLANG_FORMAT_EXEC = DATA_DIR / "clang-format-darwin"
+        CLANG_FORMAT_EXEC = "clang-format"
 elif sys.platform == "win32":
-    CLANG_FORMAT_EXEC = DATA_DIR / "clang-format-win32.exe"
+    CLANG_FORMAT_EXEC = "clang-format"
 else:
     raise NotImplementedError("Your platform is not supported")
 
